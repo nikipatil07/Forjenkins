@@ -1,0 +1,33 @@
+id:
+  providerName: admin
+  apiName: Student
+  version: 1.0.0
+type: HTTP
+context: /student/1.0.0/1.0.0
+contextTemplate: /student/1.0.0/{version}
+availableTiers:
+- name: Unlimited
+status: PUBLISHED
+visibility: public
+transports: http,https
+corsConfiguration:
+  corsConfigurationEnabled: true
+  accessControlAllowOrigins:
+  - '*'
+  accessControlAllowHeaders:
+  - authorization
+  - Access-Control-Allow-Origin
+  - Content-Type
+  - SOAPAction
+  - apikey
+  - testKey
+  accessControlAllowMethods:
+  - GET
+  - PUT
+  - POST
+  - DELETE
+  - PATCH
+  - OPTIONS
+endpointConfig: '{"endpoint_type":"http","production_endpoints":{"url":"https://jsonplaceholder.typicode.com/"},"sandbox_endpoints":{"url":"https://jsonplaceholder.typicode.com/"}}'
+isDefaultVersion: true
+enableStore: true

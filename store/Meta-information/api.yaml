@@ -1,0 +1,33 @@
+id:
+  providerName: admin
+  apiName: Branch
+  version: 1.0.0
+type: HTTP
+context: /branch/1.0.0/1.0.0
+contextTemplate: /branch/1.0.0/{version}
+availableTiers:
+- name: Unlimited
+status: CREATED
+visibility: public
+transports: http,https
+corsConfiguration:
+  corsConfigurationEnabled: true
+  accessControlAllowOrigins:
+  - '*'
+  accessControlAllowHeaders:
+  - authorization
+  - Access-Control-Allow-Origin
+  - Content-Type
+  - SOAPAction
+  - apikey
+  - testKey
+  accessControlAllowMethods:
+  - GET
+  - PUT
+  - POST
+  - DELETE
+  - PATCH
+  - OPTIONS
+endpointConfig: '{"endpoint_type":"http","production_endpoints":{"url":"https://reqres.in/"},"sandbox_endpoints":{"url":"https://reqres.in/"}}'
+isDefaultVersion: true
+enableStore: true

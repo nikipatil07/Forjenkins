@@ -1,0 +1,21 @@
+environments:
+  - name: dev
+    endpoints:
+      production:
+		url: https://reqres.in/
+		config:
+            retryTimeOut: $RETRY
+      sandbox:
+		url: https://reqres.in/
+		config:
+            retryTimeOut: $RETRY
+  - name: prod
+    endpoints:
+      production:
+		url: https://reqres.in/
+		config:
+            retryTimeOut: $RETRY
+      sandbox:
+		url: https://reqres.in/
+		config:
+            retryTimeOut: $RETRY

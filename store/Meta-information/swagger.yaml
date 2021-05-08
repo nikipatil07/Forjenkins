@@ -1,0 +1,66 @@
+components:
+  securitySchemes:
+    default:
+      flows:
+        implicit:
+          authorizationUrl: ""
+          scopes: {}
+      type: oauth2
+info:
+  title: Branch
+  version: 1.0.0
+openapi: 3.0.1
+paths:
+  /api/unknown/2:
+    get:
+      parameters: []
+      responses:
+        "200":
+          description: ok
+      security:
+      - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        optional: false
+        security-types:
+        - oauth2
+security:
+- default: []
+servers:
+- url: /
+x-wso2-auth-header: Authorization
+x-wso2-basePath: /branch/1.0.0
+x-wso2-cors:
+  accessControlAllowCredentials: false
+  accessControlAllowHeaders:
+  - authorization
+  - Access-Control-Allow-Origin
+  - Content-Type
+  - SOAPAction
+  - apikey
+  - testKey
+  accessControlAllowMethods:
+  - GET
+  - PUT
+  - POST
+  - DELETE
+  - PATCH
+  - OPTIONS
+  accessControlAllowOrigins:
+  - '*'
+  corsConfigurationEnabled: false
+x-wso2-production-endpoints:
+  type: http
+  urls:
+  - https://reqres.in/
+x-wso2-response-cache:
+  cacheTimeoutInSeconds: 300
+  enabled: false
+x-wso2-sandbox-endpoints:
+  type: http
+  urls:
+  - https://reqres.in/
+x-wso2-transports:
+- http
+- https
